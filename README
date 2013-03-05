@@ -1,0 +1,23 @@
+Overview
+========
+uhdinterface is a software interface between the numerical computing
+environment Matlab and the software defined radio driver UHD to use USRP
+SDRs from within Matlab.
+
+It has been developed by Martin Luelf in his Bachelor thesis "Evaluation of
+Synchronization Algorithms with USRP" at the Institude for Communications
+and Navigation (NAV) at Technische Universität Munich. As the copyright
+owner of this work NAV has decided to publish it under the GNU General
+Public License version 3.
+
+Content
+=======
+The actual C++ interface code is in the 'mex' folder.
+
+Example Matlab code on how to use this interface is in the 'matlab_mex'
+folder.
+
+A short instruction for installing the interface is given in the 'INSTALL'
+file.
+
+The file 'LICENSE' contains a copy of the GPLv3.

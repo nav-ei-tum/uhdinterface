@@ -1,0 +1,39 @@
+Software dependencies
+=====================
+In order to compile and run this interface both the Ettus UHD and Matlab
+must be installed. As Matlab ignores the system's boost libraries and uses
+it's own ones UHD must be compiled against the same boost version as Matlab
+is using.
+
+Known combinations:
+Matlab Boost
+------ ------
+R2010b 1.40.0
+R2011a 1.40.0
+R2011b 1.44.0
+
+
+Install from Matlab
+===================
+To install the Matlab UHD wrapper, open matlab and switch to either the
+source code directory 'mex' or the matlab example code directory
+'matlab_mex'. For the latter one make sure the source code directory is in
+path by running the 'startup.m' script in 'matlab_mex'.
+
+Make sure you mex environment is properly set up. At least run through
+'mex -setup'
+
+Then run the 'make.m' script, which will compile the interface and generate
+the mex library 'uhdinterface.mex###' with ### being an apendix based on
+your system.
+
+To use the mex file in the futue make sure that this generated mex file is
+in your matlab path.
+
+
+Install from outside Matlab
+===========================
+It is also possible to compile the wrapper from outside Matlab, as the mex
+script is only invoking your system's compiler to generate a shared library
+that is exporting the mexFunction interface. This is however very system
+dependant and you are referred to existing documentation on the Internet.
